@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>ourcommons prototype</title>
+	<meta name=”Alexander_Breeze”>
+	<link rel="stylesheet" type="text/css" href="Colours.css">
+	<link href="node_modules/video.js/dist/video-js.css" rel="stylesheet">
+</head>
+<Body>
+
+<div id="topBar1">
+	<a target="_blank" href="https://www.ourcommons.ca/DocumentViewer/en/43-2/house/sitting-69/hansard">
+    		<img src="Assets\top1.png" id="topPic1"/>
+	</a>
+</div>
+<div id="topBar2">
+	<a target="_blank" href="https://www.ourcommons.ca/DocumentViewer/en/43-2/house/sitting-69/hansard">
+    		<img src="Assets\top2.png" id="topPic2"/>
+	</a>
+</div>
+
+<div id="outer-container">
+	<img src="Assets\top3.png" id="topPic3"/>
+	<div id="inner-container">
+		<img src="Assets\scrollBig.png" usemap="#workmap" id="leftColPic"/>
+		<map name="workmap">
+			<area shape="rect" coords="150,1290,260,1310" onclick="startAll(55)" style="cursor: pointer">
+			<area shape="rect" coords="150,1835,260,1855" onclick="startAll(90)" style="cursor: pointer">
+			<area shape="rect" coords="150,2435,260,2455" onclick="startAll(160)" style="cursor: pointer">
+		</map>
+		<div id="rightBar">
+			<div id="rightStickTop">
+				<img src="Assets\rightBar1.png" id="rightBar1"/>
+				<img src="Assets\rightBar2.png" id="rightBar2"/>
+			</div>
+			<div id="rightBarSeparator"></div>
+			<div id="rightStickBottom">
+				
+
+
+
+				<div id="videoPlayer" style="display: none">
+					<div id="video">
+						<span id="vidSpeed" style="visibility:hidden"></span>
+					</div>
+					<div id="videoNobar"></div>
+					<img id="xButton" src="Assets/x.png" style="visibility:hidden" title="close">
+					<img id="-Button" src="Assets/-.png" style="visibility:hidden" title="minimize">
+					<img id="rButton" src="Assets/resize.png" style="visibility:hidden" title="resize">
+					<div id="videoControlsBar" style="visibility:hidden">
+						<input id="seekSlider" class="slider" type="range" min="0" max="1000" value="0" step="1">
+						<img id="playPauseButton" src="Assets/pause.png" title="play">
+						<img id="skipB" src="Assets/back.png" title="skip back 10">
+						<img id="skipF" src="Assets/forward.png" title="skip forward 10">
+						<span id="volPopupHandler"></span>
+						<img id="volume" src="Assets/soundNone.png" title="volume">
+						<input class="slider" id="volSlider" type="range" min="0" max="100" value="50" step="1">
+						<span id="timeNum"><span id="curTimeText"></span> / <span id="durTimeText"></span></span>
+				
+						<img id="fullScreen" src="Assets/fullscreenY.png" title="fullscreen">
+						<img id="minMax" src="Assets/minPlayer.png" title="miniplayer">
+						<img id="download" src="Assets/download.png" title="download">
+						<img id="share" src="Assets/share.png" title="share">
+						<img id="settings" src="Assets/settings.png" title="settings">
+						<img id="subs" src="Assets/subs.png" title="subtitles and audio">
+						<img id="mobileAudio" src="Assets/AUDFL.png" title="audio">
+						<img id="mobileSubs" src="Assets/CCYES.png" title="subtitles">
+						<img id="goTo" src="Assets/goTo.png" title="open in ParlVu">
+					</div>
+					<div id="settingsPopup" style="visibility:hidden">
+						<span id="speedTitle">Speed</span>
+						<span id="speed75">0.75</span>
+						<span id="speedNormal">Normal</span>
+						<span id="speed15">1.5</span>
+						<span id="speed20">2.0</span>
+						<div id="vertLine1"></div>
+						<span id="qualityTitle">Quality</span>
+						<span id="qualityAuto">Auto</span>
+						<span id="qualityHigh">High</span>
+						<span id="qualityMedium">Med</span>
+						<span id="qualityLow">Low</span>
+					</div>
+					<div id="captionsPopup" style="visibility:hidden">
+						<span id="audioTitle">Audio</span>
+						<span id="englishAud">English</span>
+						<span id="frenchAud">French</span>
+						<span id="floorAud">Floor</span>
+						<div id="vertLine2"></div>
+						<span id="subtitlesTitle">Subtitles</span>
+						<span id="offSub">Off</span>
+						<span id="englishSub">English</span>
+						<span id="frenchSub">French</span>
+					</div>
+					<div id="captionsPopup2" style="visibility:hidden">
+						<span id="subtitlesTitle2">Subtitles</span>
+						<span id="offSub2">Off</span>
+						<span id="englishSub2">English</span>
+						<span id="frenchSub2">French</span>
+					</div>
+				</div>
+				
+
+
+
+				<img src="Assets\rightBar3.png" id="rightBar3"/>
+			</div>
+		</div>
+	</div>
+	<img src="Assets\bottom1.png" id="bottom1"/>
+</div>
+<img src="Assets\bottom2.png" id="bottom2"/>
+
+<script src="node_modules/video.js/dist/video.js"></script>
+<script src="node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+<script src="node_modules/videojs-contrib-quality-levels/dist/videojs-contrib-quality-levels.js"></script>
+<script src="Logic.js"></script>
+
+</body>
+</html>

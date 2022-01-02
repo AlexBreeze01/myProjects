@@ -1,0 +1,18 @@
+hello, if you are reading this hopefully you are taking this prototype and making it into a full website!
+
+download and share icons do nothing, they seem to be supposed to clip the video or something, 
+really complicated UI and backend, and not part of the prototype requirements. See old ParlVu for more info
+
+I commented out node_modules->video.js->dist->video.js->ln 65215 because it was filling the console with warnings, couldn't fix, not really broken
+the other warnings are for pausing video when it's loading, accessing video length when it's loading (seekTimeUpdate gets called every 0.025 seconds to update the 
+video bar progress and stuff based on video length, if the video hasn't loaded yet it puts an error for length. The errors don't break anything, so I ignore it)
+
+to prevent audio skipping I wait for vidPlayer.readyState==4, that means the video player is ready to go
+Firefox is really stupid, doesn't load full scroll3a.png, so I reload it every 0.3 seconds in logic.js
+Firefox also needed special key listeners for +,-
+seekTimeUpdate gets called a lot, it handles real-time constant things like progress bar and time text
+The audio for the links I used is ahead 10 seconds, hence audioOffset. Set it to 0 at the top of logic.js to remove it
+sizeVideo() is for swapping between lightbox and minibox, minToggle is for minimising it (-). It's complicated, mostly because it makes lots of UI changes
+A lot of stuff relies on the 4 extra .css files, I only use one at a time and that handles most of the visual settings. There is some js DOM manipulation, but not much
+syncTime keeps the audio and video players synced up, really cool little custom function I came up with myself
+The drag stuff is to make the lightbox moveable

@@ -1,0 +1,156 @@
+/*This is the css for the new ourcommons prototype by Alex Breeze*/
+
+/*This gets rid of white borders*/
+html, body { margin: 0; padding: 0; height: 100%;font-family: Arial;}
+
+#topBar1 {
+  	float: top;
+  	width: 100%;
+	height: 30px;
+	background-color: #333333;
+}
+
+#topPic1 {
+	display: block;
+	margin: 0 auto;
+	height: 30px;
+	width: 1160px;
+	cursor: default;
+}
+
+#topBar2 {
+  	float: top;
+  	width: 100%;
+	height: 121px;
+	background-color: white;
+}
+
+#topPic2 {
+	display: block;
+	margin: 0 auto;
+	height: 121px;
+	width: 1115px;
+	cursor: default;
+}
+
+#topPic3 {
+	display: block;
+	margin: 0 auto;
+	height: 340px;
+	width: 1140px;
+}
+
+#outer-container {
+	width: 100%;
+	height: auto;
+	background-color: #f0f0f0;
+}
+
+#inner-container {
+	position: relative;
+  	display: block;
+	margin: 0 auto;
+	width: 1140px;
+	height: auto;
+}
+
+#leftColPic {
+  	display: block;
+	width: 1140px;
+	height: auto;
+}
+
+#rightBar {
+	position: absolute;
+	top: 0px;
+	right: 1px;
+	width: 364px;
+	//height: 2500px;
+	height: 3111px;
+	z-index: 2;
+}
+
+#rightStickTop {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+	width: 100%;
+	height: auto;
+}
+
+#rightBar1 {
+	display: block;
+	width: 364px;
+	height: 175px;
+}
+
+#rightBar2 {
+	display: block;
+	width: 364px;
+	height: 277px;
+}
+
+#rightBarSeparator {
+	width: 364px;
+	height: 0px;
+	//padding-bottom: 2042px;
+	padding-bottom: 2653px;
+}
+
+#rightStickBottom {
+	position: -webkit-sticky;
+	position: sticky;
+	bottom: 0px;
+	width: 364px;
+	height: auto;
+}
+
+#rightBar3 {
+	display: block;
+	width: 364px;
+	height: 10px;
+}
+
+#bottom1 {
+	display: block;
+	margin: 0 auto;
+	height: 66px;
+	width: 1140px;
+}
+
+#bottom2 {
+	display: block;
+	margin: 0 auto;
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+}
+@media screen and (max-device-width: 1140px){
+	#bottom2 {
+		width: 1140px;
+	}
+}
+
+#video {
+  	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+
+#mainStream{
+	width: 100%;
+	height: 100%;
+}
+
+#audioPlayer {
+	display: none;
+}
+
+
+/*#info {
+	display: none;
+	width: 36;
+	bent: false;
+	value: worth;
+	crescent_radius: 36px;
+*/

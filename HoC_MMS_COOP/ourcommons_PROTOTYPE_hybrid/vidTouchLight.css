@@ -1,0 +1,364 @@
+//removed these for mobile
+#vidSpeed {display: none;}
+#volPopupHandler {display:none;}
+#volume {display:none;}
+#volSlider {display:none;}
+#download {display: none;}
+
+#videoPlayer {
+	height: min-content;
+	position: fixed;
+	top: 0px;
+	width: 723px;
+	left: calc(((100% - 1140px) / 2) + 16px);
+}
+@media screen and (max-device-width: 1140px){
+	#videoPlayer{
+		left: 16px;
+	}
+}
+
+#videoNobar {
+	position: absolute;
+	bottom: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#seekSlider {
+	position: absolute;
+	bottom: 10px;
+	width: 96%;
+	left: 2%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  background: white;
+}
+
+.slider::-webkit-slider-thumb {
+  //alex
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: white;
+}
+
+#videoControlsBar {
+	visibility: visible;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 100%;
+}
+
+#playPauseButton {
+	position: absolute;
+	top: 40%;
+	bottom: 40%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: auto;
+	height: 20%;
+}
+
+#skipB{
+	position: absolute;
+	top: 40%;
+	bottom: 40%;
+	margin: auto;
+	margin-left: 20%;
+	margin-right: 70%;
+	width: auto;
+	height: 20%;
+}
+
+#skipF {
+	position: absolute;
+	top: 40%;
+	bottom: 40%;
+	margin: auto;
+	margin-left: 70%;
+	margin-right: 20%;
+	width: auto;
+	height: 20%;
+}
+
+#timeNum {
+	position: absolute;
+	left: 3%;
+	bottom: 20px;
+	color: white;
+	letter-spacing: -1px;
+}
+
+#fullScreen {
+	position: absolute;
+	right: 10px;
+	bottom: 30px;
+	width: auto;
+	height: 20px;
+}
+
+#share {
+	position: absolute;
+	top: 20px;
+	left: 85px;
+	height: 30px;
+	width: auto;
+}
+
+#settings {
+	position: absolute;
+	top: 20px;
+	left: 40px;
+	width: auto;
+	height: 30px;
+}
+
+#settingsPopup {
+	display: none;
+	position: absolute;
+	top: 60px;
+	left: 20px;
+	width: 210px;
+	height:135px;
+	border-radius: 10px;
+	background-color: #2a2a2a;
+	opacity: 0.9;
+}
+
+#speedTitle {
+	position: absolute;
+	left: 125px;
+	top: 10px;
+	font-size: 20px;
+	color: white;
+}
+
+#speed75 {
+	position: absolute;
+	left: 125px;
+	top: 45px;
+	color: grey;
+}
+
+#speedNormal {
+	position: absolute;
+	left: 125px;
+	top: 75px;
+	color: white;
+}
+
+#speed15 {
+	position: absolute;
+	left: 125px;
+	top: 105px;
+	color: grey;
+}
+
+#speed20 {display: none;}
+
+#vertLine1 {
+	height: 135px;
+	border-right: 2px solid black;
+	position: absolute;
+	left: 100px;
+}
+
+#qualityTitle {
+	position: absolute;
+	left: 25px;
+	top: 10px;
+	font-size: 20px;
+	color: white;
+}
+
+#qualityAuto {display: none;}
+
+#qualityHigh {
+	position: absolute;
+	left: 25px;
+	top: 45px;
+	color: white;
+}
+
+#qualityMedium {
+	position: absolute;
+	left: 25px;
+	top: 75px;
+	color: grey;
+}
+
+#qualityLow {
+	position: absolute;
+	left: 25px;
+	top: 105px;
+	color: grey;
+}
+
+#subs {display:none;}
+
+#mobileAudio {
+	position: absolute;
+	top: 20px;
+	right: 90px;
+	width: 40px;
+	height: 30px;
+}
+
+#captionsPopup {
+	display: none;
+	position: absolute;
+	right: 90px;
+	top: 60px;
+	width: 100px;
+	height:120px;
+	border-radius: 10px;
+	background-color: #2a2a2a;
+	opacity: 0.9;
+}
+
+#mobileSubs {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: auto;
+	height: 30px;
+}
+
+#captionsPopup2 {
+	display: none;
+	position: absolute;
+	right: 20px;
+	top: 60px;
+	width: 120px;
+	height:120px;
+	border-radius: 10px;
+	background-color: #2a2a2a;
+	opacity: 0.8;
+}
+
+#audioTitle {
+	position: absolute;
+	left: 25px;
+	top: 10px;
+	font-size: 20px;
+	color: white;
+}
+
+#englishAud {
+	position: absolute;
+	left: 25px;
+	top: 40px;
+	color: grey;
+}
+
+#frenchAud {
+	position: absolute;
+	left: 25px;
+	top: 65px;
+	color: grey;
+}
+
+#floorAud {
+	position: absolute;
+	left: 25px;
+	top: 90px;
+	color: white;
+}
+
+#vertLine2 {display: none;}
+#subtitlesTitle {display: none;}
+#offSub {display: none;}
+#englishSub {display: none;}
+#frenchSub {display: none;}
+
+#subtitlesTitle2 {
+	position: absolute;
+	left: 25px;
+	top: 10px;
+	font-size: 20px;
+	color: white;
+}
+
+#offSub2 {
+	position: absolute;
+	left: 25px;
+	top: 40px;
+	color: white;
+}
+
+#englishSub2 {
+	position: absolute;
+	left: 25px;
+	top: 65px;
+	color: grey;
+}
+
+#frenchSub2 {
+	position: absolute;
+	left: 25px;
+	top: 90px;
+	color: grey;
+}
+
+#xButton {
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	width: auto;
+	height: 20px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+#-Button {
+	position: absolute;
+	right: 30px;
+	top: 0px;
+	width: 20px;
+	height: auto;
+	cursor: pointer;
+	z-index: 2;
+}
+
+#rButton {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 20px;
+	height: auto;
+	cursor: pointer;
+	z-index: 2;
+}
+
+#minMax {
+	position: absolute;
+	right: 40px;
+	bottom: 30px;
+	width: 24px;
+	height: 20px;
+	cursor: pointer;
+}
+
+#goTo {
+	position: absolute;
+	right: 72px;
+	bottom: 30px;
+	width: auto;
+	height: 20px;
+}

@@ -1,0 +1,400 @@
+#videoPlayer {
+	position: absolute;
+	bottom: 5px;
+  	width: 100%;
+	height: min-content;
+}
+
+#vidSpeed {
+	visibility: hidden;
+	position: absolute;
+	top: 5px;
+	right: 70px;
+	color: white;
+	font-size: 25px;
+	z-index: 9;
+}
+
+#videoNobar {
+	position: absolute;
+	bottom: 60px;
+	top: 0px;
+	width: 100%;
+}
+
+#seekSlider {
+	position: absolute;
+	bottom: 40px;
+	width: 100px;
+	left: 132px;
+	cursor: pointer;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  background: white;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: white;
+  cursor: pointer;
+}
+
+#videoControlsBar {
+	position: absolute;
+	bottom: 0px;
+	height: 60px;
+	width: 100%;
+}
+
+#playPauseButton {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	width: 18px;
+	height: auto;
+	cursor: pointer;
+}
+
+#skipB{
+	position: absolute;
+	left: 35px;
+	bottom: 11px;
+	width: auto;
+	height: 18px;
+	cursor: pointer;
+}
+
+#skipF {
+	position: absolute;
+	left: 60px;
+	bottom: 11px;
+	width: auto;
+	height: 18px;
+	cursor: pointer;
+}
+
+#volPopupHandler {
+	position: absolute;
+	left: 10px;
+	bottom: 33px;
+	width: 110px;
+	height: 20px;
+	display: none;
+	cursor: pointer;
+}
+
+#volume {
+	position: absolute;
+	left: 10px;
+	bottom: 35px;
+	width: auto;
+	height: 18px;
+	cursor: pointer;
+}
+
+#volSlider {
+	position: absolute;
+	left: 35px;
+	bottom: 40px;
+	width: 80px;
+	cursor: pointer;
+	display: none;
+}
+
+#timeNum {
+	position: absolute;
+	left: 125px;
+	bottom: 11px;
+	color: white;
+	letter-spacing: -1px;
+}
+
+#fullScreen {
+	position: absolute;
+	right: 10px;
+	bottom: 11px;
+	width: auto;
+	height: 18px;
+	cursor: pointer;
+}
+
+#download {
+	position: absolute;
+	right: 10px;
+	bottom: 35px;
+	width: auto;
+	height: 18px;
+	cursor: pointer;
+}
+
+#share {
+	position: absolute;
+	right: 35px;
+	bottom: 35px;
+	width: auto;
+	height: 18px;
+	cursor: pointer;
+}
+
+#settings {
+	position: absolute;
+	left: 85px;
+	bottom: 11px;
+	width: auto;
+	height: 18px;
+	cursor: pointer;
+}
+
+#settingsPopup {
+	display: none;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 210px;
+	height:140px;
+	//Peter: 5;
+	border-radius: 10px;
+	background-color: #2a2a2a;
+	opacity: 0.9;
+}
+
+#speedTitle {
+	position: absolute;
+	left: 25px;
+	top: 10px;
+	font-size: 20px;
+	color: white;
+	cursor: default;
+}
+
+#speed75 {
+	position: absolute;
+	left: 25px;
+	top: 40px;
+	color: grey;
+	cursor: pointer;
+}
+
+#speedNormal {
+	position: absolute;
+	left: 25px;
+	top: 65px;
+	color: white;
+	cursor: default;
+}
+
+#speed15 {
+	position: absolute;
+	left: 25px;
+	top: 90px;
+	color: grey;
+	cursor: pointer;
+}
+
+#speed20 {
+	position: absolute;
+	left: 25px;
+	top: 115px;
+	color: grey;
+	cursor: pointer;
+}
+
+#vertLine1 {
+	height: 140px;
+	border-right: 2px solid black;
+	position: absolute;
+	left: 100px;
+}
+
+#qualityTitle {
+	position: absolute;
+	left: 125px;
+	top: 10px;
+	font-size: 20px;
+	color: white;
+	cursor: default;
+}
+
+#qualityAuto {
+	position: absolute;
+	left: 125px;
+	top: 40px;
+	color: white;
+	cursor: default;
+}
+
+#qualityHigh {
+	position: absolute;
+	left: 125px;
+	top: 65px;
+	color: grey;
+	cursor: pointer;
+}
+
+#qualityMedium {
+	position: absolute;
+	left: 125px;
+	top: 90px;
+	color: grey;
+	cursor: pointer;
+}
+
+#qualityLow {
+	position: absolute;
+	left: 125px;
+	top: 115px;
+	color: grey;
+	cursor: pointer;
+}
+
+#subs {
+	position: absolute;
+	right: 65px;
+	bottom: 11px;
+	width: auto;
+	height: 18px;
+	cursor: pointer;
+}
+
+#captionsPopup {
+	display: none;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 210px;
+	height:115px;
+	border-radius: 10px;
+	background-color: #2a2a2a;
+	opacity: 0.9;
+}
+
+#captionsPopup2 {display: none;}
+#mobileAudio {display: none;}
+#mobileSubs {display: none;}
+#rButton {display: none;}
+
+#audioTitle {
+	position: absolute;
+	left: 25px;
+	top: 10px;
+	font-size: 20px;
+	color: white;
+	cursor: default;
+}
+
+#englishAud {
+	position: absolute;
+	left: 25px;
+	top: 40px;
+	color: grey;
+	cursor: pointer;
+}
+
+#frenchAud {
+	position: absolute;
+	left: 25px;
+	top: 65px;
+	color: grey;
+	cursor: pointer;
+}
+
+#floorAud {
+	position: absolute;
+	left: 25px;
+	top: 90px;
+	color: white;
+	cursor: default;
+}
+
+#vertLine2 {
+	height: 115px;
+	border-right: 2px solid black;
+	position: absolute;
+	left: 100px;
+}
+
+#subtitlesTitle {
+	position: absolute;
+	left: 125px;
+	top: 10px;
+	font-size: 20px;
+	color: white;
+	cursor: default;
+}
+
+#offSub {
+	position: absolute;
+	left: 125px;
+	top: 40px;
+	color: white;
+	cursor: default;
+}
+
+#englishSub {
+	position: absolute;
+	left: 125px;
+	top: 65px;
+	color: grey;
+	cursor: pointer;
+}
+
+#frenchSub {
+	position: absolute;
+	left: 125px;
+	top: 90px;
+	color: grey;
+	cursor: pointer;
+}
+
+#xButton {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: auto;
+	height: 20px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+#-Button {
+	position: absolute;
+	right: 40px;
+	top: 10px;
+	width: 20px;
+	height: auto;
+	cursor: pointer;
+	z-index: 2;
+}
+
+#minMax {
+	position: absolute;
+	right: 35px;
+	bottom: 13px;
+	width: 20px;
+	height: auto;
+	cursor: pointer;
+}
+
+#goTo {
+	position: absolute;
+	right: 65px;
+	bottom: 35px;
+	width: auto;
+	height: 18px;
+	cursor: pointer;
+}
