@@ -1,0 +1,97 @@
+/*This is the css for the new ourcommons prototype by Alex Breeze*/
+
+/*This gets rid of white borders*/
+html, body { margin: 0; padding: 0; height: 100%;font-family: Arial;}
+
+#topBar1 {
+  	float: top;
+  	width: 100%;
+	height: 30px;
+	background-color: #333333;
+}
+
+#topPic1 {
+	display: block;
+	margin: 0 auto;
+	height: 30px;
+	width: 1160px;
+	cursor: default;
+}
+
+#main {
+	position: absolute;
+	top: 100px;
+	left: 150px;
+	width: 800px;
+	height: min-content;
+	
+	position: relative;
+	float: top;
+}
+
+#bottom {
+	position: relative;
+	float: bottom;
+	margin-top: 500px;
+	margin-bottom: -5px;
+	//top: 5000px;
+	bottom: 0px;
+	width: 100%;
+	height: auto;
+}
+
+#video {
+  	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+
+#mainStream{
+	width: 100%;
+	height: 100%;
+}
+
+#audioPlayer {
+	display: none;
+}
+
+#suggestedSearches {
+	visibility: hidden;
+}
+
+#results {
+	margin-top:10px;
+	height: min-content;
+}
+
+.streamOption {
+	width: 200px;
+	height: 50px;
+	display: block;
+	background-color: green;
+}
+
+.resultBox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 900px;
+	height: 110px;
+	background-color: #9ddbee;
+	border: 2px solid #8bcbdf;
+	cursor: pointer;
+}
+
+.resultText {
+	cursor: pointer;
+	width: min-content;
+}
+
+
+/*#info {
+	display: none;
+	width: 36;
+	bent: false;
+	value: worth;
+	crescent_radius: 36px;
+*/

@@ -1,0 +1,31 @@
+Frontend of forced alignment project
+
+In terms of the video player, I used video.js
+all the functionality is custom code, written in logic.js
+download and share icons do nothing
+
+I commented out node_modules->video.js->dist->video.js->ln 65215 because it was filling the console with warnings, couldn't fix, not really broken
+the other warnings are for pausing video when it's loading, accessing video length when it's loading (seekTimeUpdate gets called every 0.025 seconds to update the 
+video bar progress and stuff based on video length, if the video hasn't loaded yet it puts an error for length. The errors don't break anything, so I ignore it)
+
+to prevent audio skipping I wait for vidPlayer.readyState==4, that means the video player is ready to go
+seekTimeUpdate gets called a lot, it handles real-time constant things like progress bar and time text
+syncTime keeps the audio and video players synced up, really cool little custom function I came up with myself
+The drag/resize stuff is to make the lightbox moveable/resizeable
+
+If the audio plays but the video is blank, you may have mixed up audio and video links
+video: blah-<language (en,fr,fl)>-blah.mp4/m3u8
+audio:  blah-blah-<language (EN,FR,FL).mp4/.m3u8
+
+the things to generate the lists of options are at the bottom of logic.js
+
+If the audio is offset, change audioOffset for the given stream. So far all offsets have been whole negative numbers around 10  (-9,-10,-12)
+They should be in the data.jsonp file, works good enough
+
+captions don't work
+
+In the lists (options, streams, occurences), instead of storing data separately I store it in the elements themselves
+options are the list of black text, streams are green buttons, occurences are blue rectangles
+options contain their text, streams contain their stream number (index in data) and the search term, occurences contain their stream number and start time
+
+If names can't be found for the first 10 results, it stops looking for them (namesMissed). This reduces lag.

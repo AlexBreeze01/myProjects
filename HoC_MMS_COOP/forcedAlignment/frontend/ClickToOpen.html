@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>forced alignment prototype</title>
+	<meta name=”Alexander_Breeze”>
+	<link rel="stylesheet" type="text/css" href="Colours.css">
+	<link href="node_modules/video.js/dist/video-js.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="topBar1">
+	<a target="_blank" href="https://www.ourcommons.ca/DocumentViewer/en/43-2/house/sitting-69/hansard">
+    		<img src="Assets\top1.png" id="topPic1"/>
+	</a>
+</div>
+
+<div id="main">
+	<h>WELCOME TO <b>THE PROTOTYPE</b>, DEMONSTRATING TECHNOLOGY OF... THE FUTURE!</h>
+	<p>Please enter text to search for, then press enter</p>
+	<input type="text" oninput="searchWords(event)" onKeyPress="searchWordEnter(event)" id="userInput" style="width:400px" title="press enter to search!" autocomplete="off">
+	<button type="button" onclick="searchWordClick(event)">Search</button>
+	<p></p>
+	<h id="suggestedSearches">suggested searches:</h>
+	<ul id="searchOptions"></ul>
+	<div id="results"></div>
+
+	<div id="videoPlayer" style="display: none">
+		<div id="video">
+			<span id="vidSpeed" style="visibility:hidden"></span>
+		</div>
+		<div id="videoNobar"></div>
+		<img id="xButton" src="Assets/x.png" style="visibility:hidden" title="close">
+		<img id="rButton" src="Assets/resize.png" style="visibility:hidden" title="resize">
+		<div id="videoControlsBar" style="visibility:hidden">
+			<input id="seekSlider" class="slider" type="range" min="0" max="1000" value="0" step="1">
+			<img id="playPauseButton" src="Assets/pause.png" title="play">
+			<img id="skipB" src="Assets/back.png" title="skip back 10">
+			<img id="skipF" src="Assets/forward.png" title="skip forward 10">
+			<span id="volPopupHandler"></span>
+			<img id="volume" src="Assets/soundNone.png" title="volume">
+			<input class="slider" id="volSlider" type="range" min="0" max="100" value="50" step="1">
+			<span id="timeNum"><span id="curTimeText"></span> / <span id="durTimeText"></span></span>
+
+			<img id="fullScreen" src="Assets/fullscreenY.png" title="fullscreen">
+			<img id="download" src="Assets/download.png" title="download">
+			<img id="share" src="Assets/share.png" title="share">
+			<img id="settings" src="Assets/settings.png" title="settings">
+			<img id="subs" src="Assets/subs.png" title="subtitles and audio">
+			<img id="mobileAudio" src="Assets/AUDFL.png" title="audio">
+			<img id="mobileSubs" src="Assets/CCYES.png" title="subtitles">
+		</div>
+		<div id="settingsPopup" style="visibility:hidden">
+			<span id="speedTitle">Speed</span>
+			<span id="speed75">0.75</span>
+			<span id="speedNormal">Normal</span>
+			<span id="speed15">1.5</span>
+			<span id="speed20">2.0</span>
+			<div id="vertLine1"></div>
+			<span id="qualityTitle">Quality</span>
+			<span id="qualityAuto">Auto</span>
+			<span id="qualityHigh">High</span>
+			<span id="qualityMedium">Med</span>
+			<span id="qualityLow">Low</span>
+		</div>
+		<div id="captionsPopup" style="visibility:hidden">
+			<span id="audioTitle">Audio</span>
+			<span id="englishAud">English</span>
+			<span id="frenchAud">French</span>
+			<span id="floorAud">Floor</span>
+			<div id="vertLine2"></div>
+			<span id="subtitlesTitle">Subtitles</span>
+			<span id="offSub">Off</span>
+			<span id="englishSub">English</span>
+			<span id="frenchSub">French</span>
+		</div>
+		<div id="captionsPopup2" style="visibility:hidden">
+			<span id="subtitlesTitle2">Subtitles</span>
+			<span id="offSub2">Off</span>
+			<span id="englishSub2">English</span>
+			<span id="frenchSub2">French</span>
+		</div>
+	</div>
+</div>
+<img src="Assets\bottom.png" id="bottom"/>
+
+<script src="node_modules/video.js/dist/video.js"></script>
+<script src="node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+<script src="node_modules/videojs-contrib-quality-levels/dist/videojs-contrib-quality-levels.js"></script>
+<script src="data.jsonp"></script>
+<script src="Logic.js"></script>
+
+</body>
+</html>
