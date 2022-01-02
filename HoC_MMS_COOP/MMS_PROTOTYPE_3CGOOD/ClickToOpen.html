@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>ParlVuPrototype</title>
+	<meta name=”Alexander_Breeze”>
+	<link rel="stylesheet" type="text/css" href="Colours.css">
+	<!--<link rel="stylesheet" type="text/css" href="vidTouch.css">-->
+	<link href="node_modules/video.js/dist/video-js.css" rel="stylesheet">
+</head>
+<Body>
+
+<div id="topbar">
+	<img id="hamburger" src="Assets/hamburgerIcon.png">
+	<a target="_blank" href="https://parlvu.parl.gc.ca/Harmony/en/View/UpcomingEvents">
+    		<img src="Assets\TopBanner.png" id="topBarPic"/>
+	</a>
+	<div id="language">
+		<p id="shortLang"><b>FR</b></p>
+	</div>
+</div>
+
+<div id="outer-container">
+	<div id="sidebar">
+		<img src="Assets\SidebarPic.png" id="leftColPic"/>
+	</div>
+	<div id="content">
+		<div id="vidbar">
+			<p id="vidDescription"><b>HoC Sitting No. 61</b></p>
+			<div id="greenBox">
+				<p id="vidStatus"><b>In Progress</b></p>
+			</div>
+		</div>
+		<div id="videoPlayer">
+			<div id="video">
+				<span id="audioOnly">AUDIO ONLY</span>
+				<span id="vidSpeed"></span>
+			</div>
+			<div id="videoNobar"></div>
+			<div id="stickyHold2">
+				<div id="vidPositionBar">
+					<input id="seekSlider" class="slider" type="range" min="0" max="1000" value="0" step="1">
+  				</div>
+			</div>
+			<div id="stickyHold">
+				<div id="videoControlsBar">
+					<img id="playPauseButton" src="Assets/pause.png">
+					<img id="skipB" src="Assets/back.png">
+					<img id="skipF" src="Assets/forward.png">
+					<span id="volPopupHandler"></span>
+					<img id="volume" src="Assets/soundNone.png">
+					<input class="slider" id="volSlider" type="range" min="0" max="100" value="50" step="1">
+					<span id="timeNum"><span id="curTimeText"></span> / <span id="durTimeText"></span></span>
+					
+					<img id="fullScreen" src="Assets/fullscreenY.png">
+					<img id="download" src="Assets/download.png">
+					<img id="share" src="Assets/share.png">
+					<img id="settings" src="Assets/settings.png">
+					<img id="subs" src="Assets/subs.png">
+					<img id="videoAudio" src="Assets/videoOnly.png">
+					<img id="mobileAudio" src="Assets/AUDFL.png">
+					<img id="mobileSubs" src="Assets/CCYES.png">
+				</div>
+				<div id="settingsPopup">
+					<span id="speedTitle">Speed</span>
+					<span id="speed75">0.75</span>
+					<span id="speedNormal">Normal</span>
+					<span id="speed15">1.5</span>
+					<span id="speed20">2.0</span>
+					<div id="vertLine1"></div>
+					<span id="qualityTitle">Quality</span>
+					<span id="qualityAuto">Auto</span>
+					<span id="qualityHigh">High</span>
+					<span id="qualityMedium">Med</span>
+					<span id="qualityLow">Low</span>
+				</div>
+				<div id="captionsPopup">
+					<span id="audioTitle">Audio</span>
+					<span id="englishAud">English</span>
+					<span id="frenchAud">French</span>
+					<span id="floorAud">Floor</span>
+					<div id="vertLine2"></div>
+					<span id="subtitlesTitle">Subtitles</span>
+					<span id="offSub">Off</span>
+					<span id="englishSub">English</span>
+					<span id="frenchSub">French</span>
+				</div>
+			</div>
+			<div id="captionsPopup2"> <!--for mobile viewer-->
+				<span id="subtitlesTitle2">Subtitles</span>
+				<span id="offSub2">Off</span>
+				<span id="englishSub2">English</span>
+				<span id="frenchSub2">French</span>
+			</div>
+		</div>
+		<div id="infobar">
+			<img src="Assets\clock.png" id="clockPic"/>
+			<p id="infoHeader"><b>Info</b><p/>
+		</div>
+		<div id="info">
+			<span style="line-height:1.4">
+			<p><span style="color:grey;">Description</span><br/>
+			Sitting No. 61 House of Commons<p/>
+			<p><span style="color:grey;">location</span><br/>
+			West Block - Chamber<p/>
+			<p><span style="color:grey;">Scheduled</span><br/>
+			Tuesday, Sep 14, 2021<br/>12:00 - 12:30<br/>30 Minutes<p/>
+			<p><span style="color:grey;">Actual</span><p/>
+			<p><span style="color:grey;">Contact</span><p/>
+			<p>Information<p/>
+			<p><a href="mailto:parlvusupport@parl.gc.ca" style="color:black;text-decoration:none;">parlvusupport@parl.gc.ca</a></br>
+			<a target="_blank" href="http://www.ourcommons.ca/About/HistoryArtsArchitecture/carillon/programme-e.htm" style="color:black;text-decoration:none;">Information website<a/><p/>
+			<p>Support<p/><!--madeb ybreezy-->
+			<p><a href="mailto:parlvusupport@parl.gc.ca" style="color:black;text-decoration:none;">parlvusupport@parl.gc.ca<a/><p/>
+			</span>
+		</div>
+	</div>
+</div>
+
+<script src="node_modules/video.js/dist/video.js"></script>
+<script src="node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+<script src="node_modules/videojs-contrib-quality-levels/dist/videojs-contrib-quality-levels.js"></script>
+<script src="Logic.js"></script>
+
+</body>
+</html>

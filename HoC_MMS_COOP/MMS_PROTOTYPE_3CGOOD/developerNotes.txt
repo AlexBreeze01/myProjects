@@ -1,0 +1,44 @@
+hello, if you are reading this hopefully you are taking this prototype and making it into a full website!
+most of the website is filler, the left column is legit just a picture lol, the video player is good though
+you can take it out pretty easily, the html and css are all in big chunks, 
+<div id="videoPlayer">, the relevant bits from Colours.css, both of vidTouch.css and vidClick.css
+grab most of the assets and all the js, link them up in the HTML <head> and end of body (order matters sadly, repeat what's in the HTML)
+making it play M3U8 was tough, required node_modules for video.js and sub-libraries so grab those plugins too
+or you can download them by reading the console log errors to see what's missing and doing npm in console
+
+It takes 6 .M3U8 URL's for the stream languages/cc's, add them at the top of logic.js
+
+the video player has 2 streams, 1 video 1 audio, playing concurrently. To avoid desync they both play, pause, setPosition, speed and reload together
+I also have code at the very bottom to prevent drift desync maunally. They still desync sometimes, mostly because the stream currentTime values get messed up
+
+the volume slider disappears if you drag it out further then the bar itself and release. It's something to do with the functions being called on the 3 volume 
+elements in a bad order, but honestly it's not necessarily even a problem because after you set the volume once, you're done
+
+download and share icons do nothing, they seem to be supposed to clip the video or something, 
+really complicated UI and backend, and not part of the prototype requirements. See old ParlVu for more info
+
+(+/-) changes video speed and greys out the speed options. Also displays current speed in top corner like old VHS
+audio only mode stops video playback (not me, some plugin does it automatically, no complaints here)
+it also makes quality and cc's grey AND unselectable AND unclickable (mouse doesn't change, clicking does nothing)
+toggling audioOnly mode is the best way to refresh the streams to fix audio desync, if necessary
+I used "subs" and "captions" interchangeably, I know there's a difference but I kinda don't care, and there's only one type (CC's)
+the "s" and "d" keys do nothing, you could maybe hook them up to download and share?
+the c key toggles captionson/off, same language as audio, if audio is floor opens the captions popup menu to let you pick
+
+the big ParlVu logo top right links to the old site, hopefully that's helpful
+I included the calendar and filter png's from the sidebar, I don't use them but you might
+
+I commented out node_modules->video.js->dist->video.js->ln 65215 because it was filling the console with warnings, couldn't fix, not really broken
+the other warnings are for pausing video when it's loading, accessing video length when it's loading (seekTimeUpdate gets called every 0.025 seconds to update the 
+video bar progress and stuff based on video length, if the video hasn't loaded yet it puts an error for length. The errors don't break anything, so I ignore it)
+
+quote from online, maybe important:
+Unlike a native HLS implementation, the HLS tech has to comply with the browser's security policies. That means that all the files that make up the stream must be 
+served from the same domain as the page hosting the video player or from a server that has appropriate CORS headers configured. Easy instructions are available for 
+popular webservers and most CDNs should have no trouble turning CORS on for your account.
+
+The sites I used:
+https://github.com/videojs/http-streaming						//for streaming M3U8
+https://github.com/videojs/videojs-contrib-quality-levels				//for controlling video quality
+https://app.slack.com/client/T04R1GUPQ/C43LGP955/thread/C43LGP955-1632763578.281500	//for help with video.js
+https://youtube.com/ka2dg43&xg2lku22m12vbb7y

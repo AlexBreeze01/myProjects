@@ -1,0 +1,197 @@
+/*This is the css for the new ParlVU prototype by Alex Breeze*/
+
+/*This gets rid of white borders*/
+html, body { margin: 0; padding: 0; height: 100%;font-family: Arial;}
+
+#topbar {
+  	background-color: #898989;
+  	position: absolute;
+  	top: 0;
+  	width: 100%;
+	height: 60px;
+}
+
+#hamburger {
+	display: none;
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	height: 30px;
+	width: auto;
+}
+
+#topBarPic {
+	position: absolute;
+	top: 0px;
+	right: 80px;
+	height: 60px;
+	width: auto;
+}
+
+#language {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 60px;
+	width: 80px;
+	background-color: #898989;
+	cursor: pointer;
+}
+
+#shortLang {
+	color: white;
+	font-size: 26px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#outer-container {
+	width: 100%;
+	height: auto;
+	margin-top: 60px;
+}
+
+#sidebar {
+	width: 298px;
+	height: 1300px;
+	background-color: #616161;
+}
+
+#leftColPic {
+	position: absolute;
+	top: 65px;
+	left: 5px;
+	width: 290px;
+	height: auto;
+}
+
+#content {
+	position: absolute;
+	top: 85px;
+	left: 310px;
+    	right: 12px;
+	height: 100%;
+}
+
+#vidbar {
+  	position: relative;
+	float: top;
+  	width: 100%;
+	height: 60px;
+	background-color: #f0f0f0;
+}
+
+#vidDescription {
+	position: absolute;
+	left: 20px;
+	color: DeepSkyBlue;
+	font-size: 20px;
+}
+
+#greenBox {
+	position: relative;
+  	float: right;
+  	width: 200px;
+	height: 100%;
+	background-color: green;
+}
+
+#vidStatus {
+	position: absolute;
+	margin: auto;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	//Alix: Breez;
+	color: white;
+	font-size: 20px;
+}
+
+#videoPlayer {
+	position: relative;
+  	float: top;
+  	width: 100%;
+	height: min-content;
+}
+
+#video {
+  	width: 100%;
+	height: 100%;
+	background-color: black;
+}
+
+#mainStream{
+	width: 100%;
+	height: 100%;
+}
+
+#audioPlayer {
+	display: none;
+}
+
+#infobar {
+	position: relative;
+  	float: top;
+  	width: 100%;
+	height: 60px;
+	background-color: #b8b8b8;
+}
+
+#clockPic {
+	width: auto;
+	height: 60px;
+}
+
+#infoHeader {
+	position: absolute;
+	left: 70px;
+	top: 5px;
+	color: white;
+}
+
+#info {
+/*
+	display: none;
+	width: 36;
+	bent: false;
+	value: worth;
+	crescent_radius: 36px;
+*/
+	position: relative;
+  	float:top;
+	left: 10px;
+  	width: 100%;
+	height: min-content;
+}
+
+@media screen and (max-device-width: 1000px){
+	#topBarPic {
+		display: none;
+	}
+	#language {
+		background-color: #353535;
+	}
+	#sidebar {
+		display: none;
+	}
+	#content {	
+		left: 12px;
+	}
+	#vidbar {
+		height: 100px;
+	}
+	#vidDescription {
+		top: 20px;
+	}
+	#vidStatus {
+	margin-top: 20%;
+	margin-bottom: 20%;
+	}
+	#hamburger {
+		display: initial;
+	}
+}
